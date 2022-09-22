@@ -1,6 +1,6 @@
 const Header = () => {
-    const onClicking = () => {
-        console.log('A button was clicked!')
+    const onClicking = (e) => {
+        console.log(e)
     }
     return (
     <header>
