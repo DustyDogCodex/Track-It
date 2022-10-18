@@ -1,23 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
-
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
-  font-family: 'Tilt Neon', cursive;
+  margin: 0;
+  box-sizing: border-box;
   align-items: center;
 }
 
-.root{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container{
+.main{
   text-align: center;
   width: 90vw;
   min-height: 500px;
@@ -26,22 +17,4 @@ body{
   border: 2px solid salmon;
 }
 
-h1{
-  color: aquamarine;
-}
-
-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn{
-  padding: 0.5rem 1rem;
-  font-size: medium;
-  font-weight: 600;
-  color: aliceblue;
-  background: #07bcf6;
-  border-radius: 0.5rem;
-  border: none;
-}
+/* styling for header which includes the 'add a task' button */

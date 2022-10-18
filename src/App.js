@@ -1,10 +1,7 @@
-/* import { useState } from "react"; */
-import Header from "./components/Header";
-import Tasks from "./components/Tasks";
-
+import { useState } from "react";
 
 function App() {
-  /* const [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState([
     {
         id: 1,
         info: "Task #1",
@@ -18,17 +15,17 @@ function App() {
         reminder: true
     },
     {
-        id: 1,
-        info: "Task #1",
+        id: 3,
+        info: "Task #3",
         time: 'March 10th at 9am',
         reminder: true 
     }
   ])
- */
+
+
   return (
-    <div className="container">
-      <Header />
-      <Tasks /* tasks={tasks} */ />
+    <div className="main">
+      
     </div>
   );
 }
