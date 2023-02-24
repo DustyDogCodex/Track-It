@@ -17,4 +17,6 @@ body{
   border: 2px solid salmon;
 }
 
-/* styling for header which includes the 'add a task' button */
+input{
+  margin-left: 10px;
+}
