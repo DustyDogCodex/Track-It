@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 import TaskList from "./components/TaskList";
 
 function App() {
@@ -47,7 +48,8 @@ function App() {
   return (
     <div className="main">
       <div className="addTask">
-        <h1>Track your tasks!</h1>
+        <h4>Got something to do?</h4>
+        <h1>Track-It!</h1>
         <form onSubmit={addNewTask}>
           <label> New Task: 
             <input type="text" placeholder="Enter a new task" value={newTask} onChange={handleInputChange}/>

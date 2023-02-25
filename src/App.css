@@ -1,0 +1,30 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+  
+body{
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+  
+.main{
+    text-align: center;
+    width: 90vw;
+    min-height: 500px;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 2px solid salmon;
+}
+  
+input{
+    margin-left: 10px;
+}
+
+/* styling for the Task component */
+.task {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+  
