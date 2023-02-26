@@ -8,18 +8,22 @@ function App() {
   const [tasks, setTasks] = React.useState([
     {
         id: 1,
-        info: "Task #1"
+        info: "Task #1",
+        date: "May 20th at 19:00" 
     },
     {
         id: 2,
-        info: "Task #2"
+        info: "Task #2",
+        date: "May 21st at 07:00"
     },
     {
         id: 3,
-        info: "Task #3"
+        info: "Task #3",
+        date: "May 22nd at 20:00"
     }
   ])
 
+  //using state to handle user input
   const [newTask, setNewTask] = React.useState('')
 
   function handleInputChange(e){
@@ -38,11 +42,14 @@ function App() {
           info: newTask
         }
     ])
-    
-    console.log(tasks)
 
     setNewTask('')
     e.preventDefault()
+  }
+
+  //function for deleting tasks
+  function deleteTask(id){
+    setTasks(tasks.filter((task) => task.id !== id))
   }
 
   return (
@@ -57,7 +64,7 @@ function App() {
           <input type="submit" value='Add new task'/>
         </form>
       </div>
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} onDelete={deleteTask}/>
     </div>
   );
 }
