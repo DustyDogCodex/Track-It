@@ -13,9 +13,11 @@ body{
     padding: 0.5rem;
     margin: 1rem;
     border: 2px solid salmon;
+    text-align: center;
 }
 
 .addTask {
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -52,6 +52,11 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id))
   }
 
+  //function for toggling reminders
+  function toggleReminder(id){
+    console.log('TOGGLED!',id)
+  }
+
   return (
     <div className="main">
       <div className="addTask">
@@ -64,7 +69,7 @@ function App() {
           <input type="submit" value='Add new task'/>
         </form>
       </div>
-      <TaskList tasks={tasks} onDelete={deleteTask}/>
+      {tasks.length === 0 ? "No tasks have been scheduled." : <TaskList tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />}
     </div>
   );
 }
