@@ -9,17 +9,20 @@ function App() {
     {
         id: 1,
         info: "Task #1",
-        date: "May 20th at 19:00" 
+        date: "May 20th at 19:00",
+        reminder: true
     },
     {
         id: 2,
         info: "Task #2",
-        date: "May 21st at 07:00"
+        date: "May 21st at 07:00",
+        reminder: false
     },
     {
         id: 3,
         info: "Task #3",
-        date: "May 22nd at 20:00"
+        date: "May 22nd at 20:00",
+        reminder: false
     }
   ])
 
@@ -54,7 +57,14 @@ function App() {
 
   //function for toggling reminders
   function toggleReminder(id){
-    console.log('TOGGLED!',id)
+
+    setTasks(
+      tasks.map(task => 
+        task.id === id ?
+        {...task, reminder: !task.reminder} : task
+      )
+    )
+    
   }
 
   return (

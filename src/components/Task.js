@@ -3,7 +3,7 @@ import { FaTimes } from "react-icons/fa";
 
 function Task({ id, info, date, onDelete, onToggle }) {
     return (
-        <div className="task" onClick={() => onToggle(id)}>
+        <div className="task" onDoubleClick={() => onToggle(id)}>
             <h4>
                 {info} 
                 <FaTimes style={{color:'red', cursor:'pointer'}} onClick={() => onDelete(id)} />
