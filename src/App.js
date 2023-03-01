@@ -64,7 +64,7 @@ function App() {
         {...task, reminder: !task.reminder} : task
       )
     )
-    
+
   }
 
   return (
@@ -79,7 +79,13 @@ function App() {
           <input type="submit" value='Add new task'/>
         </form>
       </div>
-      {tasks.length === 0 ? "No tasks have been scheduled." : <TaskList tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />}
+
+      {
+      tasks.length === 0 ? 
+      "No tasks have been scheduled." : 
+      <TaskList tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
+      }
+
     </div>
   );
 }

@@ -41,4 +41,8 @@ input{
     justify-content: space-between;
     align-items: center;
 }
-  
+
+/* reminder class that adds a green border to tasks that hvae reminders on */
+.reminder{
+    border-left: 5px solid green;
+}
