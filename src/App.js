@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css'
 import TaskList from "./components/TaskList";
+import InputForm from './components/InputForm';
+import Header from './components/Header';
 
 function App() {
 
@@ -26,30 +28,6 @@ function App() {
     }
   ])
 
-  //using state to handle user input
-  const [newTask, setNewTask] = React.useState('')
-
-  function handleInputChange(e){
-    const newInput = e.target.value
-    setNewTask(newInput)
-  }
-
-  /* function for adding new task and preventing default event of reloading page after submitting */
-  function addNewTask(e){
-    const newID = tasks.length + 1
-
-    setTasks(prevTasks => 
-      [...prevTasks,
-        {
-          id: newID,
-          info: newTask
-        }
-    ])
-
-    setNewTask('')
-    e.preventDefault()
-  }
-
   //function for deleting tasks
   function deleteTask(id){
     setTasks(tasks.filter((task) => task.id !== id))
@@ -69,17 +47,8 @@ function App() {
 
   return (
     <div className="main">
-      <div className="addTask">
-        <h4>Got something to do?</h4>
-        <h1>Track-It!</h1>
-        <form onSubmit={addNewTask}>
-          <label> New Task: 
-            <input type="text" placeholder="Enter a new task" value={newTask} onChange={handleInputChange}/>
-          </label>
-          <input type="submit" value='Add new task'/>
-        </form>
-      </div>
-
+      <Header />
+      <InputForm />
       {
       tasks.length === 0 ? 
       "No tasks have been scheduled." : 
