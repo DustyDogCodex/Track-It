@@ -28,6 +28,23 @@ function App() {
     }
   ])
 
+  /* function for adding new task and preventing default event of reloading page after submitting */
+  function addNewTask(e){
+    const newID = tasks.length + 1
+
+      setTasks(prevTasks => 
+        [...prevTasks,
+          {
+            id: newID,
+            /* info: newTask */
+          }
+        ]
+      )
+
+    /* setNewTask('') */
+    e.preventDefault()
+  }
+
   //function for deleting tasks
   function deleteTask(id){
     setTasks(tasks.filter((task) => task.id !== id))
@@ -48,7 +65,7 @@ function App() {
   return (
     <div className="main">
       <Header />
-      <InputForm />
+      <InputForm onAddNewTask={addNewTask}/>
       {
       tasks.length === 0 ? 
       "No tasks have been scheduled." : 

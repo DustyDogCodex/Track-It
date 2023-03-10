@@ -1,32 +1,30 @@
 //form for adding new tasks to the task lis tfor display
 import React from "react"
-import { useState } from "react"
 
-function InputForm(){
+function InputForm({ addNewTask }){
     //using state to handle user input
     const [newTask, setNewTask] = React.useState('')
     const [newDate, setNewDate] = React.useState('')
     const [newReminder, setNewReminder] = React.useState(false)
 
-    /* function for adding new task and preventing default event of reloading page after submitting */
-    /* function addNewTask(e){
-        const newID = tasks.length + 1
+    //function that will pass task,date,reminder info to addNewTask function and call it
+    //this function will also prevent default action of page reloading on submit.
+    function pleaseAddTask(e){
+        e.preventDefault()
 
-        setTasks(prevTasks => 
-            [...prevTasks,
-                {
-                id: newID,
-                info: newTask
-                }
-            ]
-        )
+        if(!newTask){
+            alert('Please add a task!')
+        }
+
+        addNewTask({ newTask, newDate, newReminder })
 
         setNewTask('')
-        e.preventDefault()
-    } */
+        setNewDate('')
+        setNewReminder(false)
+    }
 
     return(
-        <form className="task-form" /* onSubmit={addNewTask} */>
+        <form className="task-form" onSubmit={pleaseAddTask}>
             <div className="form-element">
                 <label> New Task: 
                     <input 
