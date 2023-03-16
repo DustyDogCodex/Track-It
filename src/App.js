@@ -3,25 +3,26 @@ import './App.css'
 import TaskList from "./components/TaskList";
 import InputForm from './components/InputForm';
 import Header from './components/Header';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
   /* hardcoded task list for testing out the current code. User will be able to add and update tasks. */
   const [tasks, setTasks] = React.useState([
     {
-        id: 1,
+        id: uuidv4(),
         info: "Task #1",
         date: "May 20th at 19:00",
         reminder: true
     },
     {
-        id: 2,
+        id: uuidv4(),
         info: "Task #2",
         date: "May 21st at 07:00",
         reminder: false
     },
     {
-        id: 3,
+        id: uuidv4(),
         info: "Task #3",
         date: "May 22nd at 20:00",
         reminder: false
@@ -30,7 +31,7 @@ function App() {
 
   /* function for adding new task and preventing default event of reloading page after submitting */
   function addNewTask(e){
-    const newID = tasks.length + 1
+    const newID = uuidv4() 
 
       setTasks(prevTasks => 
         [...prevTasks,
@@ -52,7 +53,7 @@ function App() {
 
   //function for toggling reminders
   function toggleReminder(id){
-
+  
     setTasks(
       tasks.map(task => 
         task.id === id ?
