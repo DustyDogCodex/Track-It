@@ -14,9 +14,10 @@ function InputForm({ addNewTask }){
 
         if(!newTask){
             alert('Please add a task!')
+            return
         }
 
-        addNewTask({ newTask, newDate, newReminder })
+        addNewTask({ info: newTask, date: newDate, reminder: newReminder })
 
         setNewTask('')
         setNewDate('')

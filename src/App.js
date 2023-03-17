@@ -29,21 +29,19 @@ function App() {
     }
   ])
 
-  /* function for adding new task and preventing default event of reloading page after submitting */
-  function addNewTask(e){
+  /* function for adding new task. taskToBeAdded is an object consisting of newTask, newDate, newReminder passed as arguments */
+  function addNewTask(taskToBeAdded){
     const newID = uuidv4() 
 
-      setTasks(prevTasks => 
-        [...prevTasks,
-          {
-            id: newID,
-            /* info: newTask */
-          }
-        ]
-      )
+    setTasks(
+      [...tasks,
+        {
+          id: newID,
+          ...taskToBeAdded
+        }
+      ]
+    )
 
-    /* setNewTask('') */
-    e.preventDefault()
   }
 
   //function for deleting tasks
@@ -66,7 +64,7 @@ function App() {
   return (
     <div className="main">
       <Header />
-      <InputForm onAddNewTask={addNewTask}/>
+      <InputForm addNewTask={addNewTask}/>
       {
       tasks.length === 0 ? 
       "No tasks have been scheduled." : 
