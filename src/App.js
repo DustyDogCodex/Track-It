@@ -6,6 +6,9 @@ import Header from './components/Header';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
+  //state for toggling display of input form for adding new tasks
+  const [showForm, setShowForm] = React.useState(false)
+
 
   /* hardcoded task list for testing out the current code. User will be able to add and update tasks. */
   const [tasks, setTasks] = React.useState([
@@ -63,8 +66,10 @@ function App() {
 
   return (
     <div className="main">
-      <Header />
-      <InputForm addNewTask={addNewTask}/>
+      <Header showForm={showForm} displayForm={() => setShowForm(!showForm)} />
+
+      {showForm && <InputForm addNewTask={addNewTask}/>}
+     
       {
       tasks.length === 0 ? 
       "No tasks have been scheduled." : 

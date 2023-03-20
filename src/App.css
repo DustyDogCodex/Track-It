@@ -16,6 +16,23 @@ body{
     text-align: center;
 }
 
+/* styling for the header component */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+}
+
+.show-form-btn{
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 32px;
+    background: #d4b3f6;
+    color: white;
+}
+
 .addTask {
     margin-bottom: 30px;
     display: flex;
