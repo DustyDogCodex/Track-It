@@ -39,7 +39,7 @@ function InputForm({ addNewTask }){
             <div className="form-element">
                 <label> Date & Time: 
                     <input 
-                        type="text" 
+                        type="date" 
                         placeholder="Add date & time" 
                         value={newDate} 
                         onChange={(e) => setNewDate(e.target.value)}
@@ -55,7 +55,7 @@ function InputForm({ addNewTask }){
                     />
                 </label>
             </div>
-            <input type="submit" value='Add new task'/>
+            <input className="submit-btn" type="submit" value='Add new task'/>
         </form>
     )
 }

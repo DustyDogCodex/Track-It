@@ -9,11 +9,7 @@ function Header({ showForm, displayForm }){
                 className="show-form-btn"
                 onClick={displayForm}
             >
-                {showForm ?
-                <FaTimes /> :
-                <FaPlus />
-                }
-            
+                {showForm ? <FaTimes /> : <FaPlus />}
             </button>
         </div>
     )
