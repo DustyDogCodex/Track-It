@@ -16,8 +16,11 @@ function InputForm({ addNewTask }){
             alert('Please add a task!')
             return
         }
+    
+        //user inputted date is formatted into local date format
+        let formatted_date = new Intl.DateTimeFormat('en-US', { year: "numeric", month: "long", day: "2-digit" }).format(new Date(newDate))
 
-        addNewTask({ info: newTask, date: newDate, reminder: newReminder })
+        addNewTask({ info: newTask, date: formatted_date, reminder: newReminder })
 
         setNewTask('')
         setNewDate('')
