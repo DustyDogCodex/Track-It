@@ -10,8 +10,11 @@ function App() {
   const [showForm, setShowForm] = React.useState(false)
 
 
-  /* hardcoded task list for testing out the current code. User will be able to add and update tasks. */
-  const [tasks, setTasks] = React.useState([
+  //using state to change and track tasks.
+  const [tasks, setTasks] = React.useState([])
+
+  /* hardcoded task list for testing out the current code
+  /* [
     {
         id: uuidv4(),
         info: "Task #1",
@@ -30,7 +33,7 @@ function App() {
         date: "May 22nd at 20:00",
         reminder: false
     }
-  ])
+  ] */
 
   /* function for adding new task. taskToBeAdded is an object consisting of newTask, newDate, newReminder passed as arguments */
   function addNewTask(taskToBeAdded){

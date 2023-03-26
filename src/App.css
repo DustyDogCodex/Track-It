@@ -8,6 +8,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgb(97, 95, 255, 0.6);
 }
   
 .main {
@@ -15,7 +16,8 @@ body{
     min-height: 600px;
     padding: 0.5rem;
     margin: 1rem;
-    border: 2px solid salmon;
+    border-radius: 20px;
+    background: #ff7260;
     text-align: center;
 }
 
@@ -70,6 +72,8 @@ input{
 .task {
     margin: 10px;
     padding: 10px;
+    background: white;
+    border-radius: 20px;
     border: 1px solid black;
     line-height: 0.5;
 }
