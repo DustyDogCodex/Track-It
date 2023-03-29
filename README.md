@@ -1,5 +1,9 @@
 # Track-It!
 
+![spongebob-tasks](https://tenor.com/view/meme-patrick-star-nothing-tasks-to-do-list-gif-26536763.gif)
+
+<a href="https://dustydogcodex.github.io/Track-It/"> LIVE DEMO </a>
+
 A task tracking app built using ReactJs.
 
 For this project, I created a task tracking app that lets users add and store tasks to a task list. Users can add text about the task, a date for when the task is due and check whether or not they want a reminder for the task.
